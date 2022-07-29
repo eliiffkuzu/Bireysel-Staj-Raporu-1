@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Kültür/Gebze</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header id="header">
+		<a href="#" class="logo">kültür.GEBZE</a>
+		<div id="toggle"></div>
+		<div id="navbar">
+			<ul>
+				<li><a href="#Konserler">Konserler</a></li>
+				<li><a href="#KİtapFuarlari">Kitap Fuarları</a></li>
+				<li><a href="#Sergiler">Sergiler</a></li>
+				<li><a href="#Soylesiler">Söyleşiler</a></li>
+				<li><a href="#SiirDinletileri">Şiir Dinletileri</a></li>
+				<li><a href="#YonetimPaneli">Yönetim Paneli</a></li>
+			</ul>
+		</div>
+	</header>
+
+	<section id="Konserler">Konserler</section>
+	<section id="KİtapFuarlari">Kitap Fuarları</section>
+	<section id="Sergiler">Sergiler</section>
+	<section id="Soylesiler">Söyleşiler</section>
+	<section id="SiirDinletileri">Şiir Dinletileri</section>
+	<section id="YonetimPaneli">Yönetim Paneli</section>
+
+	<script type="text/javascript">
+		const toggle=document.getElementById('toggle')
+		const navbar=document.getElementById('navbar')
+		const header=document.getElementById('header')
+		document.onclick=function(e){
+			if(e.target.id !=='header' && e.target.id !== 'toggle' && e.taget.id !== 'navbar'){
+				toggle.classList.remove('active');
+				navbar.classList.remove('active');
+
+			}
+		}
+
+		toggle.onclick=function(){
+		toggle.classList.toggle('active');
+		navbar.classList.toggle('active');
+
+		}
+	</script>
+</body>
+</html>
